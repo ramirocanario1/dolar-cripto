@@ -18,7 +18,6 @@ export const getDolarPrice = async () => {
       usdc: { totalAsk: usdc.data[exchange]?.totalAsk, totalBid: usdc.data[exchange]?.totalBid },
     };
   }
-  console.log({ pricesByExchange });
   return pricesByExchange;
 };
 
@@ -70,6 +69,19 @@ export const getBestDolarPrice = async () => {
 
   const sortedPrices = bestPrices.sort((a, b) => a.ask - b.ask);
 
-  console.log(sortedPrices);
   return sortedPrices;
+};
+
+const dolarAPI = axios.create({
+  baseURL: `https://dolarapi.com/v1/dolares/`,
+});
+
+export const getDolaresPrice = async () => {
+  const res = await dolarAPI.get();
+  const data = res.data.filter((r) => ["blue", "bolsa", "contadoconliqui"].includes(r.casa));
+  return {
+    blue: data[0].venta,
+    mep: data[1].venta,
+    ccl: data[2].venta,
+  };
 };

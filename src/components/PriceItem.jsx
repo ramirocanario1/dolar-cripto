@@ -3,6 +3,7 @@ import s from "./PriceItem.module.css";
 import { exchangesInfo as exchanges } from "../utils/exchanges";
 import { useEffect, useState } from "react";
 import { FiExternalLink } from "react-icons/fi";
+import Skeleton from "react-loading-skeleton";
 
 export default function PriceItem({ price }) {
   return (
@@ -13,7 +14,7 @@ export default function PriceItem({ price }) {
             <CurrencyIcon currency={price.currency} />
             <h3>{exchanges[price.exchange].name}</h3>
           </div>
-          <GoToExchangeIcon url={exchanges[price.exchange].url} className={"text-lg"} />
+          <GoToExchangeIcon url={exchanges[price.exchange]?.url} className={"text-lg"} />
         </header>
         <div className="text-center flex flex-col gap-1">
           <p>
@@ -47,10 +48,12 @@ function ExchangeBorder({ colors }) {
     let index = 0;
     for (const color of colors) {
       const left = `${gap * index}%`;
+      const width = `${gap + 10}%`;
 
       const styles = {
         backgroundColor: color,
         left: left,
+        width: width,
       };
 
       const div = <div className={s.border} style={styles}></div>;
