@@ -10,7 +10,7 @@ export default function Body() {
   const dolares = useQuery({ queryKey: ["dolares"], queryFn: getDolaresPrice });
 
   return (
-    <main className="container mx-auto p-1 max-w-[80rem] flex flex-col gap-6">
+    <main className="container mx-auto p-1 max-w-[80rem] flex flex-col gap-6 pb-4">
       <BodyHeader />
       <CryptoDolarList data={cryptodolar.data} isLoading={cryptodolar.isLoading} isError={cryptodolar.isError} />
       <DolarsList data={dolares.data} isLoading={dolares.isLoading} isError={dolares.isError} />
