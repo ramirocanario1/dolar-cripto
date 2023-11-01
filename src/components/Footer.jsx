@@ -7,7 +7,7 @@ export default function Footer() {
       <a className="text-gray-400" href="https://github.com/ramirocanario1" target="_blank" rel="noreferrer">
         Ramiro Canario
       </a>
-      , usando al API de{" "}
+      , usando la API de{" "}
       <a className="text-gray-400" href="https://criptoya.com/" target="_blank" rel="noreferrer">
         CriptoYa
       </a>{" "}
