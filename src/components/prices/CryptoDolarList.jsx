@@ -2,6 +2,7 @@ import React from "react";
 import PriceItem from "./PriceItem";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
+import PricesContainer from "../common/PricesContainer";
 
 export default function CryptoDolarList({ data, isLoading, isError }) {
   let content = [];
@@ -22,10 +23,10 @@ export default function CryptoDolarList({ data, isLoading, isError }) {
   }
 
   return (
-    <section className="p-8 bg-gray-100 border-2 border-green-500 rounded-xl mx-auto">
-      <p className="mb-2">Los precios de a continuación están ordenados de menor a mayor, según el precio de compra (comisiones incluídas).</p>
+    <PricesContainer>
+      <p className="mb-4">Los precios de a continuación están ordenados de menor a mayor, según el precio de compra (comisiones incluídas).</p>
       <ul className="flex flex-wrap gap-4 lg:gap-8 md:p-5 p-1 justify-center">{content}</ul>
-    </section>
+    </PricesContainer>
   );
 }
 

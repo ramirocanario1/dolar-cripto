@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { getBestDolarPrice, getDolaresPrice } from "../api/dolar";
+import { getBestDolarPrice, getDolaresPrice } from "../../api/dolar";
 import DolarsList from "./DolarsList";
 import CryptoDolarList from "./CryptoDolarList";
 
@@ -20,7 +20,7 @@ export default function Body() {
 
 function BodyHeader() {
   return (
-    <header className="pt-5 px-1 flex flex-col gap-2">
+    <header className="pt-5 px-5 flex flex-col gap-2">
       <h2 className="text-xl font-semibold">
         Mejores precios de <span className="text-green-500">dólar cripto</span> en cada exchange de Argentina
       </h2>

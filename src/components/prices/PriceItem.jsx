@@ -1,9 +1,8 @@
-import CurrencyIcon from "./CurrencyIcon";
+import CurrencyIcon from "../common/CurrencyIcon";
 import s from "./PriceItem.module.css";
-import { exchangesInfo as exchanges } from "../utils/exchanges";
+import { exchangesInfo as exchanges } from "../../utils/exchanges";
 import { useEffect, useState } from "react";
 import { FiExternalLink } from "react-icons/fi";
-import Skeleton from "react-loading-skeleton";
 
 export default function PriceItem({ price }) {
   return (

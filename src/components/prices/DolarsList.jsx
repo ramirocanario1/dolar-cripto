@@ -1,7 +1,9 @@
 import React from "react";
-import { MdAttachMoney } from "react-icons/md";
-import { dolars } from "../utils/dolars";
+import { FaMoneyBillWave } from "react-icons/fa";
+import { dolars } from "../../utils/dolars";
 import Skeleton from "react-loading-skeleton";
+import PricesContainer from "../common/PricesContainer";
+import MoneyBillIcon from "../../icons/MoneyBillIcon";
 
 export default function DolarsList({ data, isLoading, isError }) {
   let content;
@@ -26,11 +28,11 @@ export default function DolarsList({ data, isLoading, isError }) {
   }
 
   return (
-    <section className="p-8 bg-gray-100 border-2 border-green-500 rounded-xl mx-auto w-full">
+    <PricesContainer>
       <h3 className="text-xl font-semibold">Dólares tradicionales</h3>
-      <p className="mb-2">A continuación se muestran los precios de compra de los dólares tradicionales, para tener de referencia.</p>
+      <p className="mb-4">A continuación se muestran los precios de compra de los dólares tradicionales, para tener de referencia.</p>
       <ul className="flex flex-wrap gap-4 lg:gap-8 md:p-5 p-1 justify-center">{content}</ul>
-    </section>
+    </PricesContainer>
   );
 }
 
@@ -39,7 +41,7 @@ function PriceItem({ name, price }) {
     <article className="p-5 pt-2 shadow-lg relative overflow-hidden rounded-lg bg-white">
       <div className="flex flex-col gap-2">
         <header className="flex justify-between items-center py-2">
-          <div className="flex gap-2">
+          <div className="flex gap-2 items-center">
             <DolarIcon colors={dolars[name].colors} />
             <h3 className="flex items-center">{dolars[name].name}</h3>
           </div>
@@ -81,5 +83,6 @@ function DolarIcon({ colors }) {
     backgroundColor: colors.bg,
     color: colors.symbol,
   };
-  return <MdAttachMoney className="text-4xl text-blue-200 rounded-full p-1" style={styles} />;
+
+  return <MoneyBillIcon className=" w-8 text-center" style={styles} />;
 }

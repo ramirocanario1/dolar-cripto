@@ -1,5 +1,5 @@
 import Header from "./components/Header";
-import Body from "./components/Body";
+import Body from "./components/prices/Body";
 import Footer from "./components/Footer";
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";

@@ -2,22 +2,22 @@ export const dolars = {
   blue: {
     name: "Dólar blue",
     colors: {
-      bg: "#2767cf",
-      symbol: "#fff",
+      bg: "",
+      symbol: "#2767cf",
     },
   },
   ccl: {
     name: "Dólar CCL",
     colors: {
-      bg: "#094f15",
-      symbol: "#ffffff",
+      bg: "",
+      symbol: "#094f15",
     },
   },
   mep: {
     name: "Dólar MEP",
     colors: {
-      bg: "#108223",
-      symbol: "#ffffff",
+      bg: "",
+      symbol: "#108223",
     },
   },
 };
