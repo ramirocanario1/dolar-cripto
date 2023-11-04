@@ -1,5 +1,4 @@
 import React from "react";
-import { FaMoneyBillWave } from "react-icons/fa";
 import { dolars } from "../../utils/dolars";
 import Skeleton from "react-loading-skeleton";
 import PricesContainer from "../common/PricesContainer";
@@ -38,7 +37,7 @@ export default function DolarsList({ data, isLoading, isError }) {
 
 function PriceItem({ name, price }) {
   return (
-    <article className="p-5 pt-2 shadow-lg relative overflow-hidden rounded-lg bg-white">
+    <article className="p-5 pt-2 shadow-lg relative overflow-hidden rounded-lg bg-white dark:bg-gray-900 transition-colors duration-500">
       <div className="flex flex-col gap-2">
         <header className="flex justify-between items-center py-2">
           <div className="flex gap-2 items-center">
@@ -58,7 +57,7 @@ function PriceItem({ name, price }) {
 
 function PriceItemSkeleton({ name }) {
   return (
-    <article className="p-5 pt-2 shadow-lg relative overflow-hidden rounded-lg bg-white min-w-[15rem]">
+    <article className="p-5 pt-2 shadow-lg relative overflow-hidden rounded-lg bg-white min-w-[15rem] dark:bg-gray-900">
       <div className="flex flex-col gap-2">
         <header className="flex justify-between items-center py-2">
           <div className="flex gap-2">

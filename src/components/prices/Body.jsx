@@ -20,7 +20,7 @@ export default function Body() {
 
 function BodyHeader() {
   return (
-    <header className="pt-5 px-5 flex flex-col gap-2">
+    <header className="pt-5 px-5 flex flex-col gap-2 dark:text-gray-100">
       <h2 className="text-xl font-semibold">
         Mejores precios de <span className="text-green-500">dólar cripto</span> en cada exchange de Argentina
       </h2>
